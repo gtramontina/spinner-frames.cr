@@ -1,6 +1,8 @@
 require "./spinner-frames/*"
 
 class SpinnerFrames
+  @current : Int32
+
   def initialize
     initialize(Charset[:pipe])
   end
@@ -9,8 +11,7 @@ class SpinnerFrames
     initialize(frames.split(""))
   end
 
-  def initialize(frames : Array(String))
-    @frames = frames
+  def initialize(@frames : Array(String))
     @current = @frames.size - 1
   end
 

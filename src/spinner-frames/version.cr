@@ -1,3 +1,5 @@
+require "yaml"
+
 class SpinnerFrames
-  VERSION = "1.0.0"
+  VERSION = (YAML.parse(File.read("./shard.yml")))["version"]
 end
