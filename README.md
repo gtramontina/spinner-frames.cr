@@ -1,37 +1,11 @@
-# spinner-frames.cr [![travis build](https://img.shields.io/travis/gtramontina/spinner-frames.cr.svg?style=flat-square)](https://travis-ci.org/gtramontina/spinner-frames.cr)
+<h1 align="center">
+  <p>spinner-frames.cr</p>
+  <sub><sup>A collection of spinner frames</sup></sub>
+</h1>
 
-A collection of spinner frames
+![spinner-frames](https://user-images.githubusercontent.com/374635/45750513-a9fbed00-bc52-11e8-9509-eade5a9d0d4b.gif)
 
-## Built-in frames:
-
-You can find them in `SpinnerFrames::Charset[]`.
-
-* `:pipe`: `-\\|/`
-* `:snake`: `⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏`
-* `:snake2`: `⣾⣽⣻⢿⡿⣟⣯⣷`
-* `:snake3`: `⠁⠁⠉⠙⠚⠒⠂⠂⠒⠲⠴⠤⠄⠄⠤⠠⠠⠤⠦⠖⠒⠐⠐⠒⠓⠋⠉⠈⠈`
-* `:snake4`: `⠈⠉⠋⠓⠒⠐⠐⠒⠖⠦⠤⠠⠠⠤⠦⠖⠒⠐⠐⠒⠓⠋⠉⠈`
-* `:snake5`: `⠁⠉⠙⠚⠒⠂⠂⠒⠲⠴⠤⠄⠄⠤⠴⠲⠒⠂⠂⠒⠚⠙⠉⠁`
-* `:snake6`: `⠋⠙⠚⠒⠂⠂⠒⠲⠴⠦⠖⠒⠐⠐⠒⠓⠋`
-* `:drop`: `⠁⠂⠄⡀ `
-* `:drop_back`: `⠁⠂⠄⡀⢀⠠⠐⠈`
-* `:compass`: `←↖↑↗→↘↓↙`
-* `:d_pad`: `←↑→↓`
-* `:d_pad_fat`: `⇐⇑⇒⇓`
-* `:compass_fat`: `⇐⇖⇑⇗⇒⇘⇓⇙`
-* `:bars`: `▁▃▄▅▆▇█▇▆▅▄▃▁`
-* `:bars1`: `▉▊▋▌▍▎▏▎▍▌▋▊▉`
-* `:bars2`: `▁▂▃▄▅▆▇█▉▊▋▌▍▎▏▏▎▍▌▋▊▉█▇▆▅▄▃▂▁`
-* `:checkers`: `▖▘▝▗`
-* `:fan`: `┤┘┴└├┌┬┐`
-* `:fan2`: `╫╪`
-* `:fan3`: `+x`
-* `:fan4`: `v<^>`
-* `:fan5`: `◐◓◑◒`
-* `:triangle`: `◢◣◤◥`
-* `:clock_square`: `◰◳◲◱`
-* `:clock_circle`: `◴◷◶◵`
-* `:indeterminate`: `"█▒▒▒▒", "▒█▒▒▒", "▒▒█▒▒", "▒▒▒█▒", "▒▒▒▒█", "▒▒▒█▒", "▒▒█▒▒", "▒█▒▒▒"`
+---
 
 ## Installation
 
@@ -41,6 +15,7 @@ Add this to your application's `shard.yml`:
 dependencies:
   spinner-frames:
     github: gtramontina/spinner-frames.cr
+    version: <version>
 ```
 
 ## Usage
@@ -50,7 +25,7 @@ First require it…
 require "spinner-frames"
 ```
 
-Then you can use the default charset (`:pipe`)…
+Then you can use the default charset (`:line`)…
 ```crystal
 s = SpinnerFrames.new
 5.times { print s.next } # -\|/-
@@ -58,8 +33,8 @@ s = SpinnerFrames.new
 
 … any of the built-in charsets…
 ```crystal
-s = SpinnerFrames.new(SpinnerFrames::Charset[:snake])
-5.times { print s.next } # ⠋⠙⠹⠸⠼
+s = SpinnerFrames.new(SpinnerFrames::Charset[:arc])
+5.times { print s.next } # ◜◠◝◞◡
 ```
 
 … provide a new charset as `String`…
@@ -76,8 +51,16 @@ s = SpinnerFrames.new(["[   ]", "[-  ]", "[ - ]", "[  -]", "[   ]"])
 
 ## Contributing
 
-1. Fork it ( https://github.com/gtramontina/spinner/fork )
+1. Fork it ( https://github.com/gtramontina/spinner-frames.cr/fork )
 2. Create your feature branch (git checkout -b my-new-feature)
 3. Commit your changes (git commit -am 'Add some feature')
 4. Push to the branch (git push origin my-new-feature)
 5. Create a new Pull Request
+
+## Related
+
+* https://github.com/gtramontina/ansi-escapes.cr
+
+---
+
+[![travis build](https://img.shields.io/travis/gtramontina/spinner-frames.cr.svg?style=flat-square)](https://travis-ci.org/gtramontina/spinner-frames.cr)
