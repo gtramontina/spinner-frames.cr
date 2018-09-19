@@ -4,7 +4,7 @@ class SpinnerFrames
   @current : Int32
 
   def initialize
-    initialize(Charset[:pipe])
+    initialize(Charset[:line])
   end
 
   def initialize(frames : String)
