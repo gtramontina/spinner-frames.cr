@@ -4,4 +4,9 @@ version: 1.0.0
 authors:
   - Guilherme J. Tramontina <guilherme.tramontina@gmail.com>
 
+development_dependencies:
+  ansi-escapes:
+    github: gtramontina/ansi-escapes.cr
+    version: 1.0.0
+
 license: MIT
