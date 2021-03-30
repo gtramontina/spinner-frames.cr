@@ -1,6 +1,9 @@
 name: spinner-frames
 version: 1.0.0
 
+description: |
+  A collection of spinner frames
+
 authors:
   - Guilherme J. Tramontina <guilherme.tramontina@gmail.com>
 
