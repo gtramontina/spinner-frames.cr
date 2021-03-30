@@ -12,7 +12,7 @@ print Erase::SCREEN + Cursor::HIDE
 SpinnerFrames::Charset.to_h.each_with_index do |tuple, index|
   name, frames = tuple
   spinner = SpinnerFrames.new(frames)
-  x = (index / MAX_PER_COLUMN) * COLUMN_WIDTH
+  x = (index // MAX_PER_COLUMN) * COLUMN_WIDTH
   y = (index % MAX_PER_COLUMN)
   print Cursor.to(x, y) + name.colorize.dim.to_s
   spawn do
