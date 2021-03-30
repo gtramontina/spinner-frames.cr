@@ -13,7 +13,7 @@ jobs:
         uses: oprypin/install-crystal@f0b2ce0d9d45075b6da31d7130c26cfb51744ead
 
       - name: Install shards
-        run: shards update
+        run: shards update --ignore-crystal-version
 
       - name: Run tests
         run: crystal spec
