@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install Crystal
-        uses: oprypin/install-crystal@f0b2ce0d9d45075b6da31d7130c26cfb51744ead
+        uses: oprypin/install-crystal@9b5495775080480de42edffd4b49ef733a946ba7
 
       - name: Install shards
         run: shards update --ignore-crystal-version
